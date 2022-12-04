@@ -1,0 +1,48 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:891352333644:function:5d34f6d4-e83c-4372-b16f-2b6faf150121:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:891352333644:function:5d34f6d4-e83c-4372-b16f-2b6faf150121:Release_0"
+            }
+          },
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:891352333644:function:5d34f6d4-e83c-4372-b16f-2b6faf150121:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:891352333644:function:5d34f6d4-e83c-4372-b16f-2b6faf150121:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
+      "locales": {
+        "ar-SA": {
+          "description": "نموذج للوصف الكامل",
+          "examplePhrases": [
+            "اليكسا افتحي مرحبا بالعالم",
+            "ساعديني",
+            "هلا"
+          ],
+          "keywords": [],
+          "name": "Betromeen",
+          "summary": "نموذج للوصف المختصر"
+        }
+      },
+      "testingInstructions": "Sample Testing Instructions."
+    }
+  }
+}

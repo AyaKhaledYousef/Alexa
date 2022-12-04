@@ -40,7 +40,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
 class WelcomIntenttHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
-        return ask_utils.is_request_type("WelcomIntent")(handler_input)
+        return ask_utils.is_intent_name("WelcomIntent")(handler_input)
 
     def handle(self, handler_input):
         speak_output = "لدينا فئات نيسان وهي ثلاث فئات…  1: الفل.. 2: نصف الفل..  3: الستاندر)..  أي منها تحتاج..  إلى مزيد من المعلومات الرجاء الرد باسم الفئة.. فل او نصف فل او الستاندر"
@@ -53,10 +53,12 @@ class WelcomIntenttHandler(AbstractRequestHandler):
         )
 class ElfolIntentHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
-        return ask_utils.is_request_type("ElfolIntent")(handler_input)
+        return ask_utils.is_intent_name("ElfolIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "سعر الفئة التي تستفسر عنها سيكون 2500000 بدون الضريبه … نود أيضًا إبلاغك بأن لدينا ...  خصمًا عليه تصل الى %20"
+        speak_output1 = "هل تريد السيارة على نظام الشراء النقد ام التأجير ام تجربة القياده "
+        speak_output2 = "الرجاء الرد ب شراء نقدا ام تاجير ام تجربه"
+        speak_output = speak_output1 + speak_output2
         return (
             handler_input.response_builder
                 .speak(speak_output)
@@ -66,7 +68,7 @@ class ElfolIntentHandler(AbstractRequestHandler):
 
 class CashIntentHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
-        return ask_utils.is_request_type("CashIntent")(handler_input)
+        return ask_utils.is_intent_name("CashIntent")(handler_input)
 
     def handle(self, handler_input):
         speak_output = " تتوفر الينا الفئة بالالوان الاتية (الاسود – الابيض - الذهبي) اي الالوان تفضل الرجاء الرد باختيار اللون"
@@ -82,8 +84,9 @@ class BlackIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("BlackIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = " ، سأقوم بتحويل طلبك إلى في صالة العرض وسيتصل بك بخصوص توفر اللون ويكمل معك باقي الاجرائات"
-
+        speak_output1 = " ، سأقوم بتحويل طلبك إلى في صالة العرض وسيتصل بك بخصوص توفر اللون ويكمل معك باقي الاجرائات"
+        speak_output2 = "هل تريد خدمة اخرى ؟"
+        speak_output = speak_output1 + speak_output2
         return (
             handler_input.response_builder
                 .speak(speak_output)
@@ -103,29 +106,18 @@ class RentalIntentHandler(AbstractRequestHandler):
                 .ask(speak_output)
                 .response
         )
+
 class RajhiBankIntentHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
         return ask_utils.is_intent_name("RajhiBankIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "الرواتب الخاصة: حد أدنى 8000 ريال … الرواتب الحكومية: 5000 ريال كحد أدنى"
-
+        speak_output1 = ": سأقوم بتحويل طلبك إلى مندوب المبيعات وسوف يتصل بك ويبلغك بالحسابات كامله"
+        speak_output2 = "هل لديك اي التزامات الرجاء الرد بنعم لدى التزامات ام لا ليس لدى التزامات…"
+        speak_output  = speak_output1 + speak_output2
         return (
             handler_input.response_builder
                 .speak(speak_output)
-                .ask(speak_output+ "هل ترغب بتحويل طلبك الى مندوب المبيعات" + "نرجو الرد..  ب اريد تحويل طلبي الي مندوب المبيعات "       )    
-                .response
-        )
-class YesSalesIntentHandler(AbstractRequestHandler):
-    def can_handle(self, handler_input):
-        return ask_utils.is_intent_name("YesSalesIntent")(handler_input)
-
-    def handle(self, handler_input):
-        speak_output = ": سأقوم بتحويل طلبك إلى مندوب المبيعات وسوف يتصل بك ويبلغك بالحسابات كامله"
-
-        return (
-            handler_input.response_builder
-                .speak(speak_output+"هل لديك اي التزامات الرجاء الرد بنعم لدى التزامات ام لا ليس لدى التزامات…")
                 .ask(speak_output)
                 .response
         )
@@ -148,8 +140,9 @@ class HighIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("HighIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "يؤسفني إبلاغك ... بأن التزاماتك مرتفعة وفي هذه الحالة سيرفض البنك طلبك للتأجير"
-
+        speak_output1 = "يؤسفني إبلاغك ... بأن التزاماتك مرتفعة وفي هذه الحالة سيرفض البنك طلبك للتأجير"
+        speak_output2 = "هل تريد خدمه اخرى ؟ الرجاء الرد ب نعم ام لا      "
+        speak_output  = speak_output1 + speak_output2
         return (
             handler_input.response_builder
                 .speak(speak_output)
@@ -161,11 +154,10 @@ class LowIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("LowIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "ساقوم بتحويل طلبك الى خدمة المبيعات وسوف يتصل بك ويواصل عملية الشراء"
-
+        speak_output = "هل تحب تجربة السيارة الرجاء الرد بنعم اريد تجربة السياره ام لا اريد تجربة السياره"
         return (
             handler_input.response_builder
-                .speak(speak_output+"هل تحب تجربة السيارة الرجاء الرد بنعم اريد تجربة السياره ام لا اريد تجربة السياره")
+                .speak(speak_output)
                 .ask(speak_output)
                 .response
         )
@@ -202,6 +194,19 @@ class NoLicenceIntentHandler(AbstractRequestHandler):
     def handle(self, handler_input):
         speak_output = "نعتذر عزيز العميل عن عدم اكمال الاجراءات لعدم توفر رخصة سارية المفعول"
 
+        return (
+            handler_input.response_builder
+                .speak(speak_output)
+                .ask(speak_output)
+                .response
+        )
+
+class NoServiceIntentHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        return ask_utils.is_intent_name("NoServiceIntent")(handler_input)
+
+    def handle(self, handler_input):
+        speak_output =  "شكرا لاستخدامك لنا "
         return (
             handler_input.response_builder
                 .speak(speak_output)
@@ -333,13 +338,13 @@ sb.add_request_handler(CashIntentHandler())
 sb.add_request_handler(BlackIntentHandler())
 sb.add_request_handler(RentalIntentHandler())
 sb.add_request_handler(RajhiBankIntentHandler())
-sb.add_request_handler(YesSalesIntentHandler())
 sb.add_request_handler(ResposibilityIntentHandler())
 sb.add_request_handler(HighIntentHandler())
 sb.add_request_handler(LowIntentHandler())
 sb.add_request_handler(YesCarIntentHandler())
 sb.add_request_handler(YesLicenceIntentHandler())
 sb.add_request_handler(NoLicenceIntentHandler())
+sb.add_request_handler(NoServiceIntentHandler())
 
 
 

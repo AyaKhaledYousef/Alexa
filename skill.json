@@ -3,23 +3,23 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "arn:aws:lambda:eu-west-1:891352333644:function:5d34f6d4-e83c-4372-b16f-2b6faf150121:Release_0"
+          "uri": "arn:aws:lambda:eu-west-1:891352333644:function:4557736d-0401-446d-b62e-f65e1ff4e054:Release_0"
         },
         "interfaces": [],
         "regions": {
           "NA": {
             "endpoint": {
-              "uri": "arn:aws:lambda:us-east-1:891352333644:function:5d34f6d4-e83c-4372-b16f-2b6faf150121:Release_0"
+              "uri": "arn:aws:lambda:us-east-1:891352333644:function:4557736d-0401-446d-b62e-f65e1ff4e054:Release_0"
             }
           },
           "EU": {
             "endpoint": {
-              "uri": "arn:aws:lambda:eu-west-1:891352333644:function:5d34f6d4-e83c-4372-b16f-2b6faf150121:Release_0"
+              "uri": "arn:aws:lambda:eu-west-1:891352333644:function:4557736d-0401-446d-b62e-f65e1ff4e054:Release_0"
             }
           },
           "FE": {
             "endpoint": {
-              "uri": "arn:aws:lambda:us-west-2:891352333644:function:5d34f6d4-e83c-4372-b16f-2b6faf150121:Release_0"
+              "uri": "arn:aws:lambda:us-west-2:891352333644:function:4557736d-0401-446d-b62e-f65e1ff4e054:Release_0"
             }
           }
         }
@@ -38,7 +38,7 @@
             "هلا"
           ],
           "keywords": [],
-          "name": "Betromeen",
+          "name": "petromin",
           "summary": "نموذج للوصف المختصر"
         }
       },

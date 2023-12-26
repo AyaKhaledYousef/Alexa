@@ -1,7 +1,6 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "نظام التشغيل",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -24,8 +23,8 @@
           "samples": []
         },
         {
-          "name": "WelcomIntent",
           "slots": [],
+          "name": "WelcomIntent",
           "samples": [
             "التفاصيل",
             "ممكن اعرف الفئات",
@@ -38,8 +37,8 @@
           ]
         },
         {
-          "name": "ElfolIntent",
           "slots": [],
+          "name": "ElfolIntent",
           "samples": [
             "نعم",
             "ستاند",
@@ -59,9 +58,16 @@
           ]
         },
         {
-          "name": "CashIntent",
           "slots": [],
+          "name": "CashIntent",
           "samples": [
+            "شرا",
+            "شيراء",
+            "شراء",
+            "نقداَ",
+            "نقدي",
+            "نجدي",
+            "نجدى",
             "نقدياً",
             "نقديا",
             "النقدى",
@@ -73,8 +79,8 @@
           ]
         },
         {
-          "name": "BlackIntent",
           "slots": [],
+          "name": "BlackIntent",
           "samples": [
             "الأبيض",
             "أبيض",
@@ -95,8 +101,8 @@
           ]
         },
         {
-          "name": "RentalIntent",
           "slots": [],
+          "name": "RentalIntent",
           "samples": [
             "اريد تأجير",
             "اريد تاجير",
@@ -111,9 +117,29 @@
           ]
         },
         {
-          "name": "RajhiBankIntent",
           "slots": [],
+          "name": "RajhiBankIntent",
           "samples": [
+            "الإستثمار",
+            "بنك الإستثمار",
+            "بنك الاستثمار",
+            "الاستثمار",
+            "الفرنسى",
+            "الفرنسي",
+            "بنك الفرنسي",
+            "بنك الرياض",
+            "الرياض",
+            "بنك الأهلى",
+            "الأهلى",
+            "بنك الاهلى",
+            "الاهلى",
+            "بنك البلات",
+            "البلات",
+            "بنك البلاد",
+            "البلاد",
+            "راجح",
+            "رجى",
+            "رجحي",
             "بنك راجحى",
             "البنك الراجحى",
             "الراجح",
@@ -122,8 +148,8 @@
           ]
         },
         {
-          "name": "ResposibilityIntent",
           "slots": [],
+          "name": "ResposibilityIntent",
           "samples": [
             "نعم التزمات",
             "نعم التزامات",
@@ -138,8 +164,8 @@
           ]
         },
         {
-          "name": "HighIntent",
           "slots": [],
+          "name": "HighIntent",
           "samples": [
             "الالتزام مرتفع",
             "علي",
@@ -156,8 +182,8 @@
           ]
         },
         {
-          "name": "LowIntent",
           "slots": [],
+          "name": "LowIntent",
           "samples": [
             "صغير الالتزام",
             "الالتزام صغير",
@@ -172,9 +198,16 @@
           ]
         },
         {
-          "name": "YesCarIntent",
           "slots": [],
+          "name": "YesCarIntent",
           "samples": [
+            "تجربه قياده",
+            "تجربة قيادة",
+            "تجربة قياده",
+            "تجربه القيادة",
+            "تجربه القياده",
+            "تجربة القيادة",
+            "تجربة القياده",
             "اريد تجربة السيارة",
             "أريد تجربة السياره",
             "تجربه السيارة",
@@ -191,8 +224,8 @@
           ]
         },
         {
-          "name": "YesLicenceIntent",
           "slots": [],
+          "name": "YesLicenceIntent",
           "samples": [
             "عندى رخصة",
             "رخصة ساريه",
@@ -216,8 +249,8 @@
           ]
         },
         {
-          "name": "NoLicenceIntent",
           "slots": [],
+          "name": "NoLicenceIntent",
           "samples": [
             "لا يوجد رخصة قيادة سارية",
             "لا يوجد رخصة قيادة ",
@@ -243,9 +276,13 @@
           ]
         },
         {
-          "name": "NoServiceIntent",
           "slots": [],
+          "name": "NoServiceIntent",
           "samples": [
+            "مع السلامه",
+            "شكر",
+            "سلام",
+            "شكرا",
             "لأه",
             "لاه",
             "لأ",
@@ -253,8 +290,8 @@
           ]
         }
       ],
-      "types": []
+      "types": [],
+      "invocationName": "نظام التشغيل"
     }
-  },
-  "version": "6"
+  }
 }

@@ -43,7 +43,7 @@ class WelcomIntenttHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("WelcomIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "لدينا فئات نيسان وهي ثلاث فئات…  1: الفل.. 2: نصف الفل..  3: الستاندر)..  أي منها تحتاج..  إلى مزيد من المعلومات الرجاء الرد باسم الفئة.. فل او نصف فل او الستاندر"
+        speak_output = "لدينا فئات نيسان وهي ثلاث فئات 1: الفل.. 2: نصف الفل..  3: إستاندرد)..  أي منها تحتاج..  إلى مزيد من المعلومات الرجاء الرد باسم الفئة.. فُلْ.. او.. نصف الفُلْ.. او إستاندرد"
 
         return (
             handler_input.response_builder
@@ -56,8 +56,8 @@ class ElfolIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("ElfolIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output1 = "هل تريد السيارة على نظام الشراء النقد ام التأجير ام تجربة القياده "
-        speak_output2 = "الرجاء الرد ب شراء نقدا ام تاجير ام تجربه"
+        speak_output1 = "هل تريد السيارة على نظام الشراء النقد.. أمْ.. التأجير.. أمْ.. تجربة القياده "
+        speak_output2 = "الرجاء الرد ب.. شراء نقداً.. أمْ.. تأجير.. أمْ.. تجربة"
         speak_output = speak_output1 + speak_output2
         return (
             handler_input.response_builder
@@ -71,7 +71,7 @@ class CashIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("CashIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = " تتوفر الينا الفئة بالالوان الاتية (الاسود – الابيض - الذهبي) اي الالوان تفضل الرجاء الرد باختيار اللون"
+        speak_output = " تتوفر إلينا الفئة بالالوان الاتية \(الاسود – الابيض - الذهبي) ا\ي الالوان تُفضِل \ الرجاء الرد باختيار اللون"
 
         return (
             handler_input.response_builder
@@ -84,8 +84,8 @@ class BlackIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("BlackIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output1 = " ، سأقوم بتحويل طلبك إلى في صالة العرض وسيتصل بك بخصوص توفر اللون ويكمل معك باقي الاجرائات"
-        speak_output2 = "هل تريد خدمة اخرى ؟"
+        speak_output1 = " ، سأقوم بتحويل طلبك إلى صالة العرض وسيتصل بك بخصوص توفر اللون ويكمل معك باقي الاجراءات"
+        speak_output2 = "\هل تريد خدمة اخرى ؟..."
         speak_output = speak_output1 + speak_output2
         return (
             handler_input.response_builder
@@ -98,7 +98,7 @@ class RentalIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("RentalIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "هل يمكنك أن تخبرنا من فضلك عن أي بنك تريد المتابعة الرجاء الرد باسم البنك؟"
+        speak_output = "هل يمكنك أن تخبرنا من فضلك عن أي بنك تريد المتابعة...  الرجاء الرد بإسم البنك؟"
 
         return (
             handler_input.response_builder
@@ -112,8 +112,8 @@ class RajhiBankIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("RajhiBankIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output1 = ": سأقوم بتحويل طلبك إلى مندوب المبيعات وسوف يتصل بك ويبلغك بالحسابات كامله"
-        speak_output2 = "هل لديك اي التزامات الرجاء الرد بنعم لدى التزامات ام لا ليس لدى التزامات…"
+        speak_output1 = ": \سوف أقوم بتحويل طلبك إلى مندوب المبيعات وسوف يتصل بك ويبلغك بالحسابات كامله"
+        speak_output2 = "هل لديك اي التزامات\ الرجاء الرد بنعم لدى التزامات \ أمْ \ لا \ ليس لدى التزامات \…"
         speak_output  = speak_output1 + speak_output2
         return (
             handler_input.response_builder
@@ -127,7 +127,7 @@ class ResposibilityIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("ResposibilityIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "هل الالتزام عالي ام منخفض الرجاء الرد ب الالتزام عالي ام الالتزام  منخفض"
+        speak_output = "هل الالتزام عالي أمْ منخفض \الرجاء الرد ب \الالتزام عالي   \ أمْ \ الالتزام  منخفض"
 
         return (
             handler_input.response_builder
@@ -141,7 +141,7 @@ class HighIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         speak_output1 = "يؤسفني إبلاغك ... بأن التزاماتك مرتفعة وفي هذه الحالة سيرفض البنك طلبك للتأجير"
-        speak_output2 = "هل تريد خدمه اخرى ؟ الرجاء الرد ب نعم ام لا      "
+        speak_output2 = "هل تريد خدمه اخرى ؟ الرجاء الرد \ نعم ام لا \     "
         speak_output  = speak_output1 + speak_output2
         return (
             handler_input.response_builder
@@ -154,7 +154,7 @@ class LowIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("LowIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "هل تحب تجربة السيارة الرجاء الرد بنعم اريد تجربة السياره ام لا اريد تجربة السياره"
+        speak_output = "هل تحب تجربة السيارة الرجاء الرد.. ب \نعم اريد تجربة السياره \ام .لا .\ اريد تجربة السياره"
         return (
             handler_input.response_builder
                 .speak(speak_output)
@@ -166,7 +166,7 @@ class YesCarIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("YesCarIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = " هل لديك رخصة قيادة سارية الرجاء الرد بنعم لدى رخصة قياده ساريه ام لايوجد رخصة قياده ساريه"
+        speak_output = " هل لديك رخصة قيادة سارية\ الرجاء الرد.. بنعم لدى رخصة قياده سارية \ أمْ \ لايوجد رخصة قيادة سارية"
 
         return (
             handler_input.response_builder
